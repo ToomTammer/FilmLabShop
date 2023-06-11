@@ -1,0 +1,28 @@
+﻿
+@{
+    ViewData["Title"] = "Admin Page";
+}
+
+<link rel="stylesheet" href="~/css/FormAdmin.css">
+
+
+
+<!--------------------Loin Form------------------------->
+<body>
+
+    <div class="login-page container d-flex justify-content-center align-content-center">
+        <div class="form">
+            <form class="login-form" id="loginForm" asp-controller="Admin" asp-action="Index">
+                <h1 class="message">welcome back</h1>
+                <p style="opacity: 40%; margin-bottom: 15px">sign in to start your session</p>
+                <input name="AdminName" type="text" id="usernamelog" placeholder="username" />
+                <input name="AdminPw" type="password" placeholder="password" />
+                <p id="msg" style="color: red; margin-bottom: 15px"> @ViewBag.msg</p>
+                <button type="submit">Login</button>
+            </form>
+        </div>
+    </div>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="jquery-3.5.1.min.js"></script>
+<!--------------------Loin Form------------------------->

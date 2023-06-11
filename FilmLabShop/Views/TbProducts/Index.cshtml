@@ -1,0 +1,121 @@
+﻿@model IEnumerable<FilmLabShop.Models.db.TbProduct>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div style="background-color: #F2E5D5; min-width: 80rem; min-height: 50rem; ">
+    <section class="container">
+        <div style="height:100px;">
+        </div>
+        <h1>stock in</h1>
+        <form class="d-flex" asp-controller="TbProducts" asp-action="Searchbox">
+            <input class="form-control me-2 " name="query" type="text" placeholder="search by name...    " aria-label="Search" />
+            <input class="btn btn-info mx-2" type="submit" value="Search" />
+        </form>
+
+        <p>
+            <a class="btn btn-primary" style="margin:20px 0;" asp-action="Create">Create New</a>
+        </p>
+        @if (Model.Count() > 0)
+        {
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>
+                            ID
+                        </th>
+                        <th>
+                            Image
+                        </th>
+                        <th>
+                            Name
+                        </th>
+                        <th>
+                            Price
+                        </th>
+                        <th>
+                            Category
+                        </th>
+                        <th>
+                            Stock
+                        </th>
+                        <th>
+                            Saled
+                        </th>
+                        <th>
+                            Status
+                        </th>
+
+                        <th>
+                            SubHead
+                        </th>
+                        <th>
+                            Descript
+                        </th>
+
+
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.PdId)
+                            </td>
+                            <td>
+                                @if (item.PdImg != null)
+                                {
+                                    <img style="width:80px;" src="data:image/*;base64,@(Convert.ToBase64String(item.PdImg))">
+                                }
+                                else
+                                {
+                                    <img style="width:80px;" src="~/img/empty.jpg" />
+                                }
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.PdName)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.PdPrice)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Cate.CateId)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.PdStock)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.PdDelete)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.PdStatus)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.PdSubHead)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.PdDetail)
+                            </td>
+
+                            <td>
+                                <a class="btn btn-secondary mt-3" asp-action="Edit" asp-route-id="@item.PdId">Edit</a>
+                                <a class="btn btn-info mt-3" asp-action="Delete" asp-route-id="@item.PdId">Details</a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        }
+        else
+        {
+            <h2 class="mt-3">No Data Found</h2>
+        }
+
+        <div style="height:40px;">
+        </div>
+    </section>
+</div>
+

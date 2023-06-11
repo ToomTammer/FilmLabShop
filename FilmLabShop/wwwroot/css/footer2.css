@@ -1,0 +1,48 @@
+﻿body {
+}
+
+footer {
+    display: inline-block;
+    align-content: center;
+    font-family: 'Prompt', sans-serif;
+    font-weight: 400;
+    /*font-family: 'Roboto', sans-serif;*/
+    left: 0;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    background-color: #E8D1B5;
+    color: #734C36;
+    font-size: 14px;
+    line-height: 35px !important;
+}
+
+p {
+    display: inline-block;
+    font-weight: 500;
+    font-size: 16px;
+    margin-top: 15px;
+    margin-bottom: 0px;
+}
+
+.payicon {
+    display: inline-block;
+    width: 28px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.deliver {
+    display: inline-block;
+    height: 28px;
+    width: auto;
+    margin-right: 5px;
+}
+
+.mdicon {
+    display: inline-block;
+    width: 28px;
+    height: auto;
+    margin-right: 15px;
+    margin-bottom: 15px;
+}

@@ -1,0 +1,895 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Anton&family=Chonburi&family=Prompt&family=Roboto:wght@500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(../img/bgall.PNG);
+    background-repeat: repeat-y repeat-x;
+    margin-top: 4.75em;
+}
+
+/***********************Hero Section****************************/
+/*container*/
+.banner-home {
+    background: #D6E86C;
+    width: 100%;
+    height: auto;
+    display: flex;
+}
+
+.jumbotron {
+    padding: 7rem 2rem;
+}
+
+/*Image banner*/
+.img-banner {
+    display: flex;
+    align-items: center;
+}
+
+/*text banner*/
+.head-text-banner {
+    font-family: 'Anton', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 5.25em;
+    line-height: calc(111px-5px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* 245788 */
+    color: #245788;
+}
+
+.detail-text {
+    font-family: 'Prompt', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: calc(1.125em-6px);
+    line-height: calc(31px-5px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* 245788 */
+    color: #245788;
+}
+
+/*Button*/
+.btn-banner {
+    width: 7.063em;
+    height: calc(59px-6px);
+    font-family: 'Prompt', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 169.69%;
+    display: flex;
+    justify-content: center;
+    flex-grow: 0;
+    align-items: center;
+    background: #F2E5D5;
+    color: #245788;
+    margin-top: 20px;
+}
+
+    .btn-banner:hover {
+        background: #D35244;
+        color: #F2E5D5;
+    }
+
+    .btn-banner:focus {
+        box-shadow: none;
+    }
+
+/***********************Hero Section****************************/
+
+/***********************Ad image Section****************************/
+
+.ad-section {
+    margin-top: 70px;
+}
+
+    .ad-section img {
+        width: 100%;
+        height: auto;
+    }
+/***********************Ad image Section****************************/
+
+/***********************Card camera Section****************************/
+
+.camera-category {
+    margin-top: 80px;
+    margin-bottom: 30px;
+    padding: 0;
+}
+
+/*Header text*/
+.text-header-product {
+    font-family: 'Chonburi', cursive;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 32px;
+    display: flex;
+    align-items: center;
+    color: #734C36;
+    padding: 0;
+}
+
+.btn-icon-category {
+    height: 34px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+
+.btn-camera-icon {
+    width: 25px;
+    height: 25px;
+    color: #EA9A6C;
+    display: flex;
+    align-items: center;
+}
+
+.btn-camera-text {
+    font-family: 'Chonburi', cursive;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    text-align: right;
+    color: #734C36;
+    padding: 0px 5px;
+}
+
+/*Header text*/
+
+.card-margin a, .card-margin a:hover {
+    text-decoration: none;
+}
+
+.card-img-bg {
+    background: #BAD9C2;
+    display: flex;
+    padding: 20px 0px;
+    justify-content: center;
+    align-items: center;
+    height: 220px;
+}
+
+    .card-img-bg img {
+        width: 70%;
+        height: auto;
+    }
+
+.text-card-camera {
+    background: #8BB8BE;
+}
+
+.text-color {
+    color: #E0FF22;
+}
+
+.text-status-color {
+    margin-bottom: 5px;
+}
+
+.text-status-camera, .text-color {
+    font-size: 12px;
+}
+
+.text-status-camera, .text-title-camera,
+.text-price-camera, .text-sale-camera, .btn-card-camera {
+    color: #FFFFFF;
+}
+
+.text-color, .text-status-camera,
+.text-title-camera, .text-sale-camera, .btn-card-camera {
+    font-family: 'Prompt', sans-serif;
+}
+
+.text-title-camera {
+    font-size: 1.4em;
+}
+
+.price-sale-text {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 27px;
+    margin-bottom: 14px;
+}
+
+.text-price-camera {
+    font-size: 1.3em;
+    font-family: 'Chonburi', cursive;
+    display: flex;
+    justify-content: flex-start;
+    margin: 0;
+}
+
+.text-sale-camera {
+    font-weight: 300;
+    display: flex;
+    justify-content: flex-end;
+    margin: 0;
+}
+
+.btn-card-camera {
+    width: 100%;
+    height: 53px;
+    background: #D35244;
+    font-size: 1em;
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+    .btn-card-camera:focus {
+        box-shadow: none;
+    }
+
+.btn-primary {
+    border: 0px;
+}
+
+    .btn-primary:hover {
+        background: #245788;
+    }
+
+.card {
+    border: 0;
+    padding: 0;
+    height: 451px;
+}
+
+.card-margin {
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+/***********************Card camera Section****************************/
+
+
+
+/***********************Divider Section****************************/
+.img-divider {
+    padding: 0px 0px;
+    margin-top: 70px;
+    margin-bottom: 70px;
+    width: 100%;
+}
+/***********************Divider Section****************************/
+
+
+
+/***********************About us Section****************************/
+
+.img-text-aboutus, .detail-text-aboutus {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+    .img-text-aboutus img {
+        width: calc(290px - 20px);
+        height: auto;
+    }
+
+.detail-text-aboutus {
+    font-family: 'Prompt', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 169.69%;
+    /* or 61px */
+    /* 734C36 */
+    color: #734C36;
+    text-align: center;
+    margin-top: 45px;
+}
+
+.aboutus-detail-row {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 55px;
+}
+
+.img-aboutus-detail {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+}
+
+.text-aboutus-detail strong {
+    font-size: 20px;
+}
+
+.text-aboutus-detail {
+    font-family: 'Prompt', sans-serif;
+    font-style: normal;
+    font-size: 17px;
+    line-height: 169.69%;
+    /* or 41px */
+    /* 734C36 */
+    color: #734C36;
+}
+/***********************About us Section****************************/
+
+
+
+/***********************FAQ Section****************************/
+
+.body-FAQ {
+    font-family: 'Prompt', sans-serif;
+    margin-top: 100px;
+}
+
+.body-container {
+    margin: 40px;
+}
+/*faq*/
+.section5 {
+    background: #BAD9C2;
+    overflow: hidden;
+}
+
+.title-FAQ {
+    width: 230px;
+    height: auto;
+}
+
+.question-block {
+    margin-top: 50px;
+}
+
+.question-text {
+    background: #BF7B54;
+    border-bottom-color: #A64F3C;
+    ;
+    border-bottom-style: solid;
+    border-width: 2px;
+    transition: border-bottom-color 0.3s linear;
+}
+
+    .question-text:hover {
+        cursor: pointer;
+        border-bottom-color: #A64F3C;
+        border-bottom-style: solid;
+        border-width: 2px;
+    }
+
+    .question-text p {
+        text-align: left;
+        font-size: 18px;
+        font-weight: normal;
+        margin: 10px 0px;
+        color: #ffff;
+        display: flex;
+        align-items: center;
+    }
+
+        .question-text p img {
+            display: block;
+            padding-right: 2px;
+            padding-top: 10px;
+            width: 30px;
+        }
+
+.answer-block {
+    margin-bottom: 30px;
+}
+
+
+.answer-text {
+    height: auto;
+    background: #A64F3C;
+    display: none;
+}
+
+
+    .answer-text p {
+        color: white;
+        line-height: 30px;
+        text-indent: 20px;
+        padding: 20px;
+        text-align: left;
+        font-size: 18px;
+        font-weight: normal;
+    }
+
+
+/***********************FAQ Section****************************/
+
+
+/***********************Footer Section****************************/
+
+
+.footer-sec {
+    display: inline-block;
+    align-content: center;
+    font-family: 'Prompt', sans-serif;
+    font-weight: 400;
+    /*font-family: 'Roboto', sans-serif;*/
+    left: 0;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    background-color: #E8D1B5;
+    color: #734C36;
+    font-size: 14px;
+    line-height: 35px !important;
+    margin-bottom: -100px;
+}
+
+    .footer-sec p {
+        display: inline-block;
+        font-weight: 500;
+        font-size: 16px;
+        margin-top: 15px;
+        margin-bottom: 0px;
+    }
+
+.payicon {
+    display: inline-block;
+    width: 28px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.deliver {
+    display: inline-block;
+    height: 28px;
+    width: auto;
+    margin-right: 5px;
+}
+
+.mdicon {
+    display: inline-block;
+    width: 28px;
+    height: auto;
+    margin-right: 15px;
+    margin-bottom: 15px;
+}
+/***********************Footer Section****************************/
+
+
+
+@media screen and (max-width:1600px) and (min-width:993px) {
+
+    /*card section*/
+
+
+    .card-margin {
+        margin-left: 0px;
+        padding: 0px;
+        display: flex;
+        flex-wrap: nowrap;
+    }
+
+    .card {
+        margin: 0px 5px;
+        border: 0;
+    }
+
+    /*card section*/
+
+}
+
+/*Tablet*/
+@media screen and (max-width:992.5px) and (min-width:768px) {
+    body {
+        margin-top: 4.8em;
+    }
+
+    /*banner*/
+    .head-text-banner {
+        font-size: 4em;
+        margin-top: 1em;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .row-btn {
+        display: flex;
+        flex-grow: 0;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .btn-banner {
+        width: 32.063em;
+    }
+
+    /*banner*/
+
+    /*ad section*/
+    .ad-section {
+        margin-top: 50px;
+    }
+    /*ad section*/
+
+    /*card section*/
+
+    .camera-category {
+        margin-bottom: 10px;
+    }
+
+    .card-margin {
+        margin-left: 0px;
+        padding: 0px;
+        display: flex;
+        flex-wrap: nowrap;
+    }
+
+    .card {
+        margin: 0px 5px;
+        border: 0;
+        height: 400px;
+    }
+
+    .card-img-bg img {
+        width: 70%;
+        height: auto;
+    }
+
+
+    .text-title-camera {
+        font-size: calc(20px - 7px);
+    }
+
+    .text-price-camera {
+        font-size: calc(18px - 2px);
+    }
+
+    .text-sale-camera {
+        font-size: calc(12px - 5px);
+    }
+
+    .btn-card-camera {
+        height: calc(50px - 8px);
+    }
+
+    /*card section*/
+
+
+    /*About us section*/
+    .img-text-aboutus img {
+        width: calc(250px - 60px);
+        height: auto;
+    }
+
+    .text-aboutus-detail {
+        margin: 50px 20px;
+    }
+    /*About us section*/
+}
+
+@media screen and (max-width:767.5px) and (min-width:540px) {
+    body {
+        margin-top: 4.8em;
+    }
+
+    /*banner*/
+    .head-text-banner {
+        font-size: 4em;
+        margin-top: 1em;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .row-btn {
+        display: flex;
+        flex-grow: 0;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .btn-banner {
+        width: 32.063em;
+    }
+
+    /*banner*/
+
+    /*ad section*/
+    .ad-section {
+        margin-top: 50px;
+    }
+    /*ad section*/
+
+    /*card section*/
+    .camera-category {
+        margin-bottom: 10px;
+    }
+
+    .card-margin {
+        margin-left: 0px;
+        padding: 0px;
+        display: flex;
+        flex-wrap: nowrap;
+    }
+
+    .card {
+        margin: 0px 5px;
+        border: 0;
+        height: 300px;
+    }
+
+    .card-img-bg img {
+        width: 70%;
+        height: auto;
+    }
+
+    .card-img-bg {
+        height: 168px;
+    }
+
+
+    .text-header-product {
+        font-size: calc(29px - 7px);
+    }
+
+    .text-title-camera {
+        font-size: calc(20px - 7px);
+    }
+
+    .text-price-camera {
+        font-size: calc(15px - 2px);
+    }
+
+    .text-sale-camera {
+        font-size: calc(12px - 5px);
+    }
+
+    .text-status-camera, .text-color {
+        font-size: calc(12px - 5px);
+    }
+
+    .btn-card-camera {
+        height: calc(34px - 4px);
+        margin-bottom: 5px;
+        font-size: 12px;
+    }
+
+    .card-body.text-card-camera {
+        padding: 10px;
+    }
+    /*card section*/
+
+    /*About us section*/
+    .img-text-aboutus img {
+        width: calc(250px - 60px);
+        height: auto;
+    }
+
+    .text-aboutus-detail {
+        margin: 50px 20px;
+    }
+    /*About us section*/
+
+
+
+}
+
+@media screen and (max-width:539.5px) and (min-width:416px) {
+    body {
+        margin-top: 8em;
+    }
+
+    /*banner*/
+    .head-text-banner {
+        font-size: 4em;
+        margin-top: 1em;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .detail-text {
+        text-align: center;
+    }
+
+    .row-btn {
+        display: flex;
+        flex-grow: 0;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .btn-banner {
+        width: 25.063em;
+    }
+    /*banner*/
+
+    /*ad section*/
+    .ad-section {
+        margin-top: 50px;
+    }
+    /*ad section*/
+
+    /*card section*/
+    .camera-category {
+        margin-bottom: 10px;
+    }
+
+    .card-margin {
+        margin-left: 0px;
+        padding: 0px;
+        flex-wrap: nowrap;
+    }
+
+
+    .btn-card-camera {
+        height: calc(40px - 4px);
+        margin-bottom: 5px;
+        font-size: 12px;
+    }
+
+    .card-body.text-card-camera {
+        padding: 10px;
+    }
+
+    .card {
+        margin: 0px 5px;
+        border: 0;
+        height: 305px;
+    }
+
+    .card-img-bg img {
+        width: 60%;
+        height: auto;
+    }
+
+    .card-img-bg {
+        height: 130px;
+    }
+
+    .text-header-product {
+        font-size: calc(29px - 7px);
+    }
+
+    .text-header-product {
+        font-size: calc(29px - 7px);
+    }
+
+    .text-title-camera {
+        font-size: calc(20px - 7px);
+        height: 28px;
+    }
+
+    .text-price-camera {
+        font-size: calc(15px - 2px);
+    }
+
+    .text-sale-camera {
+        font-size: calc(12px - 5px);
+    }
+
+    .text-status-camera, .text-color {
+        font-size: calc(12px - 5px);
+    }
+    /*card section*/
+
+
+    /*About us section*/
+    .img-text-aboutus img {
+        width: calc(250px - 30px);
+        height: auto;
+    }
+
+    .detail-text-aboutus {
+        font-size: calc(24px - 8px);
+    }
+
+    .text-aboutus-detail {
+        margin: 50px 20px;
+    }
+
+    /*About us section*/
+
+
+}
+
+/*Mobile*/
+@media screen and (max-width:415.5px) {
+    body {
+        margin-top: 8em;
+    }
+
+    /*banner*/
+    .head-text-banner {
+        font-size: 3em;
+        margin-top: 1em;
+        margin-right: 0px;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .detail-text {
+        text-align: center;
+    }
+
+    .row-btn {
+        display: flex;
+        flex-grow: 0;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .btn-banner {
+        width: 14.981em;
+    }
+    /*banner*/
+
+
+    /*ad section*/
+    .ad-section {
+        margin-top: 10px;
+    }
+    /*ad section*/
+
+
+    /*card section*/
+    .camera-category {
+        margin-bottom: 5px;
+    }
+
+    .card-margin {
+        margin-left: 0px;
+        padding: 0px;
+    }
+
+    .card {
+        margin: 15px 0px;
+        border: 0;
+        height: 371px;
+    }
+
+    .card-img-bg img {
+        width: 50%;
+        height: auto;
+    }
+
+    .card-img-bg {
+        height: 200px;
+    }
+
+    .text-header-product {
+        font-size: calc(24px - 5px);
+    }
+
+    .btn-camera-text {
+        font-size: calc(12px - 2px);
+    }
+
+    .btn-card-camera {
+        height: 45px;
+    }
+
+    .text-sale-camera {
+        font-size: calc(14px - 1px);
+    }
+
+
+    /*card section*/
+
+
+    /*About us section*/
+    .img-text-aboutus img {
+        width: calc(190px - 40px);
+        height: auto;
+    }
+
+    .detail-text-aboutus {
+        font-size: calc(24px - 8px);
+    }
+
+    .text-aboutus-detail {
+        margin: 50px 20px;
+    }
+    /*About us section*/
+}

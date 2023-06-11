@@ -1,0 +1,121 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Anton&family=Roboto:ital@1&display=swap');
+
+
+.nav-bar {
+    display: flex;
+    justify-content: space-between;
+    background: #734C36;
+}
+
+.navbar-nav {
+    flex-direction: row;
+}
+
+/*Search field*/
+.search-box {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding:0;
+}
+
+.RobotoFont {
+    font-family: 'Roboto', sans-serif;
+}
+
+.search-field:focus {
+    box-shadow: none;
+}
+
+.btn-search-nav {
+    width: 5.5rem;
+    height: 2.5rem;
+    background: #EBBF8A;
+    border-radius: 0px 1px 1px 0px;
+    padding: 0;
+    margin: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-nav {
+    width: calc(8.5rem - 4vmin);
+    height: calc(2.6rem - 8px);
+    background: #E8D1B5;
+    border-radius: 20px;
+    font-family: 'Anton', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    /* A64F3C */
+    font-size: calc(2.25rem - 12px);
+}
+
+.navbar-dark .navbar-nav .active > .nav-link {
+    color: #A64F3C;
+}
+
+.navbar-dark .navbar-nav .active > .nav-link:hover {
+    background: #A64F3C;color:#E8D1B5;
+}
+
+.btn-nav:focus{
+    box-shadow: none;
+}
+
+.cart-icon svg {
+    fill:#E8D1B5;
+}
+
+.cart-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cart-icon svg:hover {
+    fill: #bf7b54;
+    cursor: pointer;
+}
+
+
+@media screen and (max-width:575px) {
+    .navbar > .container {
+        justify-content: center;
+        box-sizing: border-box;
+        display: block;
+    }
+    .navbar-nav {
+        justify-content: space-between;
+    }
+    .nav-logo{
+        display:flex;
+        justify-content:center;
+    }
+    .logo-nav-img {
+        width: 20%;
+        height: auto;
+    }
+    .search-field{
+        height: 1.875rem;
+    }
+    .btn-search-nav {
+        width: calc(3.5rem - 18px);
+        height: 1.97rem;
+        margin: 2.5px 0;
+    }
+    .btn-nav {
+        width: 4.5rem;
+        font-size: calc(2.25rem - 18px);
+        height: 1.7rem;
+    }
+    .cart-icon svg {
+        width: 3.5rem;
+        height: 1.97rem;
+    }
+}

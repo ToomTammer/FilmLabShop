@@ -1,0 +1,40 @@
+﻿@{
+    ViewData["Title"] = "Your Cart";
+}
+
+<link rel="stylesheet" href="~/css/nav-bar.css">
+<link rel="stylesheet" href="~/css/EmptyCart4.css">
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+<link href="https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500;1,600&family=Roboto:wght@100;400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="~/js/CheckSearchbox.js" />
+
+
+<body>
+    <main>
+        <div class="jumbotron-fluid text-center content">
+            <div class="row">
+                <div class="col-sm-1 "> </div>
+                <div class="col-sm-1 side-block"> </div>
+                <div class="col-sm-8 summary-block">
+                    <img src="~/icon/notCart.svg" class=" mx-auto d-block img-style">
+
+                    <p>
+                        ยังไม่มีสินค้าในตะกร้า
+                    </p><br />
+                    กรุณาเลือกสินค้าอย่างน้อยหนึ่งชิ้นก่อนทำการสั่งซื้อ
+
+                    <div class="button-block">
+                        <a asp-action="ProductCategory">เลือกซื้อสินค้าต่อ </a>
+                    </div>
+
+                </div>
+                <div class="col-sm-1 side-block"> </div>
+                <div class="col-sm-1 "> </div>
+            </div>
+
+        </div>
+    </main>
+
+
+</body>
+

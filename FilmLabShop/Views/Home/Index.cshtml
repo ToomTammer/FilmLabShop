@@ -1,0 +1,398 @@
+﻿@model IEnumerable<FilmLabShop.Models.db.TbProduct>
+@{
+    ViewData["Title"] = "Home Page";
+
+    var counter = 0;
+    var counter2 = 0;
+}
+
+<link rel="stylesheet" href="~/css/nav-bar.css">
+<link rel="stylesheet" href="~/css/footer2.css">
+<link rel="stylesheet" href="~/css/Home.css">
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+<link rel="stylesheet" href="~/js/CheckSearchbox.js" />
+
+
+<script>
+    function FirstQuestion() {
+        var x = document.getElementById("Q1");
+        if (x.style.display === "none") {
+            x.style.display = "block";
+        } else {
+            x.style.display = "none";
+        }
+    }
+
+    function SecondQuestion() {
+        var x = document.getElementById("Q2");
+        if (x.style.display === "none") {
+            x.style.display = "block";
+        } else {
+            x.style.display = "none";
+        }
+    }
+
+    function ThirdQuestion() {
+        var x = document.getElementById("Q3");
+        if (x.style.display === "none") {
+            x.style.display = "block";
+        } else {
+            x.style.display = "none";
+        }
+    }
+
+    function FourthQuestion() {
+        var x = document.getElementById("Q4");
+        if (x.style.display === "none") {
+            x.style.display = "block";
+        } else {
+            x.style.display = "none";
+        }
+    }
+
+    function FifthQuestion() {
+        var x = document.getElementById("Q5");
+        if (x.style.display === "none") {
+            x.style.display = "block";
+        } else {
+            x.style.display = "none";
+        }
+    }
+
+    function SixthQuestion() {
+        var x = document.getElementById("Q6");
+        if (x.style.display === "none") {
+            x.style.display = "block";
+        } else {
+            x.style.display = "none";
+        }
+    }</script>
+
+
+<body>
+
+    <!--------------------Hero section------------------------->
+    <section class="banner-home jumbotron" role="banner">
+        <div class="container container-home p-0">
+            <div class="row col-lg-12 d-flex align-items-center justify-content-around m-0">
+                <div class="col-lg-5 col-md-9 img-banner"><img src="~/img/imgbanner1.png" class="img-fluid" /></div>
+                <div class="col-lg-4">
+                    <h1 class="head-text-banner">OLYMPUS 35SP</h1>
+                    <p class="detail-text">Olympus 35SP กล้องฟิล์ม Rangefinder ในตำนานที่ท็อปที่สุดในยุค 1969!</p>
+                    <div class="row-btn">
+                        <a asp-area="" asp-controller="Home" asp-action="ProductCategory" class="btn btn-banner" role="button">ไปหน้าสินค้า</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--------------------Hero section------------------------->
+    <!--------------------Ad section------------------------->
+    <div class="container img-fluid ad-section">
+        <img src="~/img/Ad.png" />
+    </div>
+    <!--------------------Ad section------------------------->
+    <!--------------------Camera Category------------------------->
+    <section class="container">
+        <!-------Head Camera Category-------->
+
+        <div class="col d-flex justify-content-between align-items-center camera-category">
+            <div class="text-header-product col-lg-3 col-md-6 col-sm-6">กล้องฟิล์ม</div>
+            <div class="btn btn-icon-category col-lg-3 col-md-6 col-sm-6 row">
+                <a asp-area="" asp-controller="Home" asp-action="ProductCategory" role="button" class="btn-camera-text">ดูสินค้าทั้งหมด</a>
+                <img src="~/icon/arrow_drop_down_circle.svg" class="btn-camera-icon" aria-hidden="true">
+            </div>
+        </div>
+        <!-------Head Camera Category-------->
+
+        <div class="row container d-flex justify-content-start align-items-center card-margin">
+            @foreach (var item in Model)
+            {
+                @if (counter != 3 && item.CateId == 1)
+                {
+                    <div class="card col-lg-4 p-0 card-margin-contain">
+                        <a asp-area="" asp-controller="Home" asp-action="ProductDetail" asp-route-id="@item.PdId" class="card-img-top card-img-bg">
+                            @if (item.PdImg != null)
+                            {
+                                <img src="data:image/*;base64,@(Convert.ToBase64String(item.PdImg))">
+                            }
+                            else
+                            {
+                                <img src="~/img/empty.jpg" />
+                            }
+                        </a>
+                        <div class="card-body text-card-camera">
+                            <a asp-area="" asp-controller="Home" asp-action="ProductDetail" asp-route-id="@item.PdId">
+                                <div class="row d-flex text-status-color">
+                                    <h6 class="card-text col text-status-camera">สถานะสินค้า : <span class="card-text text-color">@Html.DisplayFor(modelItem => item.PdStatus)</span></h6>
+                                </div>
+                                <h2 class="card-title text-title-camera">@Html.DisplayFor(modelItem => item.PdName)</h2>
+                                <div class="row price-sale-text">
+                                    <h3 class="text-price-camera card-text col">@String.Format("{0:c}", item.PdPrice)</h3>
+                                    <p class="card-text text-sale-camera col">@Html.DisplayFor(modelItem => item.PdDelete) ขายแล้ว</p>
+                                </div>
+                            </a>
+                            <a asp-area="" asp-controller="Home" asp-action="Addtocart2" asp-route-id="@item.PdId" class="btn btn-primary btn-card-camera">เพิ่มไปยังรถเข็น</a>
+                        </div>
+                    </div>
+
+                    counter++;
+                }
+
+            }
+
+        </div>
+
+
+
+
+    </section>
+    <!--------------------Camera Category------------------------->
+    <!--------------------Lens Category------------------------->
+    <section class="container">
+        <!-------Head Camera Category-------->
+        <div class="col d-flex justify-content-between align-items-center camera-category">
+            <div class="text-header-product col-lg-4 col-md-6 col-sm-6">เลนส์ถ่ายภาพ</div>
+            <div class="btn btn-icon-category col-lg-3 col-md-6 col-sm-6 row">
+                <a asp-area="" asp-controller="Home" asp-action="ProductCategory" role="button" class="btn-camera-text">ดูสินค้าทั้งหมด</a>
+                <img src="~/icon/arrow_drop_down_circle.svg" class="btn-camera-icon" aria-hidden="true">
+            </div>
+        </div>
+        <!-------Head Camera Category-------->
+
+        <div class="row container d-flex justify-content-start align-items-center card-margin">
+            @foreach (var item in Model)
+            {
+                @if (counter2 != 3 && item.CateId == 2)
+                {
+                    <div class="card col-lg-4 p-0 card-margin-contain">
+                        <a asp-area="" asp-controller="Home" asp-action="ProductDetail" asp-route-id="@item.PdId" class="card-img-top card-img-bg">
+                            @if (item.PdImg != null)
+                            {
+                                <img src="data:image/*;base64,@(Convert.ToBase64String(item.PdImg))">
+                            }
+                            else
+                            {
+                                <img src="~/img/empty.jpg" />
+                            }
+                        </a>
+                        <div class="card-body text-card-camera">
+                            <a asp-area="" asp-controller="Home" asp-action="ProductDetail" asp-route-id="@item.PdId">
+                                <div class="row d-flex text-status-color">
+                                    <h6 class="card-text col text-status-camera">สถานะสินค้า : <span class="card-text text-color">@Html.DisplayFor(modelItem => item.PdStatus)</span></h6>
+                                </div>
+                                <h2 class="card-title text-title-camera">@Html.DisplayFor(modelItem => item.PdName)</h2>
+                                <div class="row price-sale-text">
+                                    <h3 class="text-price-camera card-text col">@String.Format("{0:c}", item.PdPrice)</h3>
+                                    <p class="card-text text-sale-camera col">@Html.DisplayFor(modelItem => item.PdDelete) ขายแล้ว</p>
+                                </div>
+                            </a>
+                            <a asp-area="" asp-controller="Home" asp-action="Addtocart2" asp-route-id="@item.PdId" class="btn btn-primary btn-card-camera">เพิ่มไปยังรถเข็น</a>
+                        </div>
+                    </div>
+
+                    counter2++;
+
+                }
+
+            }
+
+        </div>
+
+    </section>
+    <!--------------------Lens Category------------------------->
+    <!--------------------Divider------------------------->
+    <section class="container ">
+        <img class="img-fluid img-divider" src="~/icon/divider.SVG" />
+    </section>
+    <!--------------------Divider------------------------->
+    <!--------------------About us section------------------------->
+    <section class="container">
+        <div class="img-text-aboutus"><img src="~/icon/about us.SVG" /></div>
+        <div class="detail-text-aboutus "><span class="col-lg-8">“ในยุคที่มีแต่ความวุ่นวาย แต่ก็ยังคงมีความ Slow life ซ่อนอยู่” หนึ่งในสิ่งสำคัญที่วลีนี้ต้องการสื่อคือ “กล้องฟิล์ม”</span></div>
+        <div class="row aboutus-detail-row">
+            <div class="col-lg-4 img-aboutus-detail"><img class="img-aboutus col-lg-12" src="~/img/labelfilmlab.png" /></div>
+            <div class="col-lg-7 text-aboutus-detail">
+                <strong>FilmLabคืออะไร ?</strong><br />
+                FilmLab เป็นร้านขายกล้องฟิล์ม กล้องเก่า กล้องมือสอง  อุปกรณ์ถ่ายภาพ และ ฟิล์มถ่ายรูป บริการครบวงจร โดยผู้ชำนาญการจริง ในเครือของร้านกล้องฟิล์มดีดี
+                <br /><br />
+                <strong>ขายอะไรบ้าง?</strong><br />
+                สินค้าของทางร้านมีหลากหลายดังนี้
+                <ul>
+                    <li>กล้องฟิล์ม กล้องสะสม กล้องมือสอง กล้องโบราณ กล้องฟิล์ม SLR กล้องฟิล์ม RF กล้องฟิล์ม TLR กล้องฟิล์มฟอร์แมต 4x5 กล้องฟิล์มโล่โม่ กล้องโพราลอยด์</li>
+                    <li>ฟิล์มถ่ายภาพ ฟิล์มสี ฟิล์มขาวดำ ฟิล์ม Negative ฟิล์มสไลด์ ฟิล์ม 135 ฟิล์ม 120 ฟิล์มโพลารอยด์</li>
+                    <li>เลนส์กล้องฟิล์ม เลนส์มือหมุน เลนส์วายด์ เลนส์เทเล สำหรับกล้องฟิล์มทุกรุ่น</li>
+                    <li>
+                        แบตเตอรี่กล้องฟิล์ม
+                        อุปกรณ์ถ่ายภาพ อาทิเช่น สายลั่นเตอร์ เครื่องวัดแสง ฟิวเตอร์ เคสใส่กล้องฟิล์ม สายคล้องคอ และสินค้าอื่นๆ อีกมากมาย
+                    </li>
+                    <li>
+                        บริการล้างฟิล์ม ซ่อมกล้องฟิล์ม แนะนำการใช้งานกล้องฟิล์ม และ ปรึกษาปัญหากล้องฟิล์ม โดยไม่คิดค่าใช้จ่ายใดๆ
+                        อุปกรณ์ถ่ายภาพ อาทิเช่น สานลั่นเตอร์ เครื่องวัดแสง ฟิวเตอร์สี เฟลช ...
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <!--------------------About us section------------------------->
+    <!--------------------FAQ section------------------------->
+
+    <section class=" section5 pt-5 body-FAQ">
+        <div class="pb-5">
+            <div class="jumbotron-fluid text-center body-container">
+                <div class="row" style="margin-bottom:70px;">
+                    <div class="col-sm-1 block-1"></div>
+
+                    <!--faq-->
+                    <div class="col-sm-10">
+                        <br />
+                        <img src="~/icon/faq.svg" class="title-FAQ img-fluid">
+
+                        <!--Question #1-->
+                        <div class="row question-block d-flex align-items-center">
+                            <div class="col-sm-1 "> </div>
+
+                            <div class="col-sm-10 question-text" onclick="FirstQuestion()">
+                                <p class="d-flex justify-content-between">
+                                    1.วิธีการชำระเงินที่ FilmLab รองรับ
+                                    <img src="~/icon/down-arrow.png" class="d-block img-style">
+                                </p>
+                            </div>
+                            <div class="col-sm-1 "> </div>
+                        </div>
+
+                        <div class="row answer-block">
+                            <div class="col-sm-1 "> </div>
+
+                            <div class="col-sm-10 answer-text" id="Q1">
+                                <p>
+                                    ชำระโดยการโอนเงินและอัพโหลดสลิปหลักฐานการชำระเงิน
+                                    เป็นการชำระเงินไปยังบัญชีของ FlimLab โดยผ่านทางบัญชีของผู้ซื้อสามารถศึกษาข้อมูลการชำระเงินผ่านการชำระโดยการโอนเงินและอัพโหลดสลิปหลักฐานการชำระเงิน
+                                </p>
+                            </div>
+
+                            <div class="col-sm-1 img-style "> </div>
+                        </div>
+                        <!--Question #1-->
+                        <!--Question #2-->
+                        <div class="row question-block d-flex align-items-center">
+                            <div class="col-sm-1 "> </div>
+
+                            <div class="col-sm-10 question-text" onclick="SecondQuestion()">
+                                <p class="d-flex justify-content-between">
+                                    2.ฉันสามารถติดตามสถานะการสั่งซื้อสินค้าได้อย่างไร
+                                    <img src="~/icon/down-arrow.png" class="d-block img-style">
+                                </p>
+                            </div>
+                            <div class="col-sm-1 "> </div>
+                        </div>
+
+                        <div class="row answer-block">
+                            <div class="col-sm-1 "> </div>
+
+                            <div class="col-sm-10 answer-text" id="Q2">
+                                <p>
+                                    คุณสามารถตรวจสอบสถานะคำสั่งซื้อของคุณผ่านอีเมลยืนยันการสั่งซื้อสินค้า
+
+                                    คำสั่งซื้อทั้งหมดของคุณจะถูกจัดประเภทตามสถานะการสั่งซื้อ ดังนี้<br />
+
+                                    - ที่ต้องจัดส่ง : ประกอบด้วยคำสั่งซื้อที่ชำระเงินทั้งหมดที่ยังไม่ได้จัดส่งโดยผู้ขาย<br />
+
+                                    - ที่ต้องได้รับ : ประกอบด้วยคำสั่งซื้อทั้งหมดที่ทำการจัดส่งแล้ว<br />
+                                    - สำเร็จ : ประกอบด้วยคำสั่งซื้อทั้งหมดที่จัดส่งสำเร็จแล้ว<br />
+
+                                </p>
+                            </div>
+
+                            <div class="col-sm-1 img-style "> </div>
+                        </div>
+                        <!--Question #2-->
+                        <!--Question #3-->
+                        <div class="row question-block d-flex align-items-center">
+                            <div class="col-sm-1 "> </div>
+
+                            <div class="col-sm-10 question-text" onclick="ThirdQuestion()">
+                                <p class="d-flex justify-content-between">
+                                    3.ฉันจะได้รับเงินคืนจากการยกเลิกคำสั่งซื้อได้อย่างไร
+                                    <img src="~/icon/down-arrow.png" class="d-block img-style">
+                                </p>
+                            </div>
+                            <div class="col-sm-1 "> </div>
+                        </div>
+
+                        <div class="row answer-block">
+                            <div class="col-sm-1 "> </div>
+
+                            <div class="col-sm-10 answer-text" id="Q3">
+                                <p>
+                                    คุณสามารถยกเลิกคำสั่งซื้อหลังจากการชำระเงินด้วยวิธีการส่งอีเมลหาเราได้ทาง help@support.filmlab.co.th หรือช่องทางการติดต่ออื่นๆภายในเว็บไซต์ การคืนเงินจะเป็นไปตามนโยบายที่ระบุไว้
+                                </p>
+                            </div>
+
+                            <div class="col-sm-1 img-style "> </div>
+                        </div>
+                        <!--Question #3-->
+                        <!--Question #4-->
+                        <div class="row question-block d-flex align-items-center">
+                            <div class="col-sm-1 "> </div>
+
+                            <div class="col-sm-10 question-text" onclick="FourthQuestion()">
+                                <p class="d-flex justify-content-between">
+                                    4.ฉันสามารถค้นหาประวัติการสั่งซื้อสินค้าได้อย่างไร
+                                    <img src="~/icon/down-arrow.png" class="d-block img-style">
+                                </p>
+                            </div>
+                            <div class="col-sm-1 "> </div>
+                        </div>
+
+                        <div class="row answer-block">
+                            <div class="col-sm-1 "> </div>
+
+                            <div class="col-sm-10 answer-text" id="Q4">
+                                <p>
+                                    ในขณะนี้ทาง Filmlab ยังไม่มีการเปิดใช้งานระบบสมาชิก แต่จะมีการแจ้งเตือนการสั่งซื้อสินค้าผ่านอีเมลในทุกครั้ง ทาง Filmlab ขออภัยในความไม่สะดวกมา ณ ที่นี้
+                                </p>
+                            </div>
+
+                            <div class="col-sm-1 img-style "> </div>
+                        </div>
+                        <!--Question #4-->
+                        <!--Question #5-->
+                        <div class="row question-block d-flex align-items-center">
+                            <div class="col-sm-1 "> </div>
+
+                            <div class="col-sm-10 question-text" onclick="FifthQuestion()">
+                                <p class="d-flex justify-content-between">
+                                    5.ฉันจะติดต่อ Filmlab ได้อย่างไร
+                                    <img src="~/icon/down-arrow.png" class="d-block img-style">
+                                </p>
+                            </div>
+                            <div class="col-sm-1 "> </div>
+                        </div>
+
+                        <div class="row answer-block">
+                            <div class="col-sm-1 "> </div>
+
+                            <div class="col-sm-10 answer-text" id="Q5">
+                                <p>
+                                    หากคุณมีข้อสงสัยเพิ่มเติม คุณสามารถติดต่อฝ่ายลูกค้าสัมพันธ์ได้ตลอด 24 ชั่วโมง ผ่านทาง 3 ช่องทาง<br />
+                                    1. ช่องทางการติดต่ออีเมล help@support.filmlab.co.th<br />
+                                    2. ช่องทาง (Chat) กับเจ้าหน้าที่ผ่าน Fanpage หรือบัญชีอย่างเป็นทางการของเราในช่องทางต่างๆที่ได้ระบุไว้
+                                    3.โทรติดต่อ<br />
+                                    โทรศัพท์ : 0 2470 8000<br />
+                                    โทรสาร : 0 2427 9860
+
+                                </p>
+                            </div>
+
+                            <div class="col-sm-1 img-style "> </div>
+                        </div>
+                        <!--Question #5-->
+                    </div>
+                    <div class="col-sm-1 block-2"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--------------------FAQ section------------------------->
+</body>

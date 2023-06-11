@@ -1,0 +1,89 @@
+﻿@model FilmLabShop.Models.db.TbProduct
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<section class="container">
+    <div style="height:100px;">
+    </div>
+    <h1>Create</h1>
+
+    <h4>Product</h4>
+    <hr />
+    <div class="row">
+        <div class="col-md-4">
+            <form asp-action="Create" method="post" enctype="multipart/form-data">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="PdId" class="control-label"></label>
+                    <input asp-for="PdId" class="form-control" />
+                    <span asp-validation-for="PdId" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="PdName" class="control-label"></label>
+                    <input asp-for="PdName" class="form-control" />
+                    <span asp-validation-for="PdName" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="PdPrice" class="control-label"></label>
+                    <input asp-for="PdPrice" class="form-control" />
+                    <span asp-validation-for="PdPrice" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="PdStock" class="control-label"></label>
+                    <input asp-for="PdStock" class="form-control" />
+                    <span asp-validation-for="PdStock" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="PdDelete" class="control-label"></label>
+                    <input asp-for="PdDelete" class="form-control" />
+                    <span asp-validation-for="PdDelete" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="PdStatus" class="control-label"></label>
+                    <input asp-for="PdStatus" class="form-control" />
+                    <span asp-validation-for="PdStatus" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="CateId" class="control-label"></label>
+                    <select asp-for="CateId" class="form-control" asp-items="ViewBag.CateId"></select>
+                </div>
+                <div class="form-group">
+                    <label asp-for="PdSubHead" class="control-label"></label>
+                    <textarea asp-for="PdSubHead" class="form-control" rows="4" cols="50" ></textarea>
+                    <span asp-validation-for="PdSubHead" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="PdDetail" class="control-label"></label>
+                    <textarea asp-for="PdDetail" class="form-control" rows="4" cols="50"></textarea>
+                    <span asp-validation-for="PdDetail" class="text-danger"></span>
+                </div>
+
+
+                <div class="form-group">
+                    <label asp-for="PdImg" class="control-label"></label>
+                    <input type="file" asp-for="PdImg" class="form-control" style="border:none;" id="files" />
+                    <span asp-validation-for="PdImg" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Create" class="btn btn-primary" />
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div>
+        <a asp-action="Index">Back to List</a>
+    </div>
+    <div style="height:40px;">
+    </div>
+</section>
+
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

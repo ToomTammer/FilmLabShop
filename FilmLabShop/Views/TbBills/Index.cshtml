@@ -1,0 +1,82 @@
+﻿@model IEnumerable<FilmLabShop.Models.db.TbBill>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div style="background-color: #F2E5D5; min-width: 80rem; min-height: 50rem; ">
+    <section class="container">
+        <div style="height:100px;">
+        </div>
+        <h1>Detail Order</h1>
+        <form class="d-flex" asp-controller="TbBills" asp-action="Searchbox">
+            <input class="form-control me-2 " name="query" type="text" placeholder="search by name ...    " aria-label="Search" />
+            <input class="btn btn-info mx-2" type="submit" value="Search" />
+        </form>
+        @if (Model.Count() > 0)
+        {
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>
+                            Date
+                        </th>
+                        <th>
+                            Customer Name
+                        </th>
+                        <th>
+                            Product ID
+                        </th>
+                        <th>
+                            Product Name
+                        </th>
+                        <th>
+                            Quantity
+                        </th>
+                        <th>
+                            Total
+                        </th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.BillDate)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Cus.CusName)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Pd.PdId)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.PdName)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.BillQty)
+                            </td>
+
+                            <td>
+                                @Html.DisplayFor(modelItem => item.BillTotal)
+                            </td>
+                            <td>
+                                <a class="btn btn-secondary" asp-action="Delete" asp-route-id="@item.BillId">Details</a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        }
+        else
+        {
+            <h2 class="mt-3">No Data Found</h2>
+        }
+
+        <div style="height:40px;">
+        </div>
+    </section>
+</div>
+

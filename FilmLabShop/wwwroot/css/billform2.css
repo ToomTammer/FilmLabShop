@@ -1,0 +1,365 @@
+﻿html {
+    position: relative;
+    min-height: 100%;
+    
+}
+
+body {
+    background-image: url(../img/bgall.PNG);
+    background-repeat: repeat-y repeat-x;
+    overflow-x: hidden;
+    margin-top: 150px;
+    width: 100%;
+    margin-bottom: 400px;
+    word-break: break-word;
+}
+
+.head-text {
+    text-align: center;
+    color: #734C36;
+    font-family: 'Anton', sans-serif;
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+    .head-text img {
+        width: 200px;
+       
+    }
+
+ 
+
+
+.T-block img {
+    width: 150px;
+}
+
+.T-block {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+
+    margin-bottom: 25px;
+    padding-top: 18px;
+    padding-bottom: 18px;
+    background-color: #BAD9C2;
+    box-shadow: 7px 7px #734C36;
+    color: #245788;
+    font-family: 'Chonburi',sans-serif;
+    font-size: 24px;
+    line-height: 50px;
+}
+
+    .T-block p {
+        font-family: 'Anton',sans-serif;
+        font-size: 55px;
+    }
+
+    .T-block h6 {
+        font-family: 'Prompt',sans-serif;
+        font-weight: 500;
+        font-size: 35px;
+    }
+
+
+.B-block {
+    width: 100%;
+    margin-bottom: 25px;
+    padding-top: 18px;
+    padding-bottom: 17px;
+    background-color: #8BB8BE;
+    box-shadow: 7px 7px #734C36;
+    color: #245788;
+    font-family: 'Chonburi',sans-serif;
+    font-size: 24px;
+    line-height: 50px;
+}
+
+    .B-block .icon {
+        width: 38px;
+        display: inline-block;
+        margin-right: 10px;
+        margin-bottom: 10px;
+    }
+
+    .B-block .line {
+        width: 150px;
+    }
+
+    .B-block p {
+        font-family: 'Anton',sans-serif;
+        font-size: 28px;
+    }
+
+
+
+.R-block {
+}
+
+    .R-block form {
+        width: 100%;
+        background-color: #BF7B54;
+        display: inline-block;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        box-shadow: 7px 7px #734C36;
+    }
+
+    .R-block p {
+        left: 0;
+        color: #F2E5D5;
+        line-height: 40px;
+        font-family: 'Prompt',sans-serif;
+        font-weight: 300;
+        font-size: 16px;
+        text-indent: 60px;
+    }
+
+.field {
+    text-indent: 10px;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    width: 85%;
+    background-color: #F2E5D5;
+    border-radius: 10px;
+    border-style: none;
+    height: 40px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    transition : 0.3s;
+}
+    .field:hover {
+        background-color: #E8D1B5;
+    }
+
+
+
+.attach {
+    font-family: 'Prompt',sans-serif;
+    text-indent: 60px;
+    color: #F2E5D5;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.submit-btn {
+    font-family: 'Prompt',sans-serif;
+    display: block;
+    width: 30%;
+    padding: 8px;
+    border-radius: 20px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    color: #F2E5D5;
+    background-color: #734C36;
+    font-size: 16px;
+    border-style: none;
+    transition : 0.3s;
+}
+
+    .submit-btn:hover {
+       background-color: #F2E5D5;
+       color: #734C36;
+       
+    }
+
+/*--------------footer----------*/
+
+.footer-style {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    display: flex ;
+    bottom: 0;
+    align-content: center;
+    font-family: 'Prompt', sans-serif;
+    font-weight: 400;   
+    padding-top: 10px;
+    padding-bottom: 20px;
+    background-color: #E8D1B5;
+    color: #734C36;
+    font-size: 14px;
+    line-height: 35px !important;
+    word-break: break-word;
+    margin-top: 100px;
+}
+
+p {
+    display: inline-block;
+    font-weight: 500;
+    font-size: 16px;
+    margin-top: 15px;
+    margin-bottom: 0px;
+}
+
+.payicon {
+    display: inline-block;
+    width: 28px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.deliver {
+    display: inline-block;
+    height: 28px;
+    width: auto;
+    margin-right: 5px;
+}
+
+.mdicon {
+    display: inline-block;
+    width: 28px;
+    height: auto;
+    margin-right: 15px;
+    margin-bottom: 15px;
+}
+
+
+/*--------------Responsive---------------*/
+
+/*----mobile-----*/
+
+@media only screen and (max-device-width: 480px) and (min-device-width: 50px) {
+    body {
+        height: 1000px;
+        width: 100%;
+        display: flex;
+    }
+
+    .attach {
+        text-indent: 40px;
+    }
+
+    .T-block {
+        font-size: 25px;
+    }
+
+        .T-block p {
+            font-size: 40px;
+        }
+
+    .B-block {
+        font-size: 25px;
+    }
+
+        .B-block p {
+            font-size: 20px;
+        }
+
+    .footer-style {
+        position: fixed;
+        position: relative;
+        bottom: -20px;
+        width: 100%;
+        white-space: nowrap;
+    }
+}
+
+
+@media only screen and (max-device-width: 280px) and (min-device-width: 280px) {
+    body {
+        height : 1000px;
+        width: 100%;
+        display: flex;
+        
+       
+    }
+    
+    .attach {      
+        text-indent: 40px;       
+    }
+
+    .T-block{
+        font-size : 25px;
+    }
+    .T-block p{
+        font-size: 40px;
+    }
+
+    .B-block {
+        font-size: 25px;
+    }
+    .B-block p {
+        font-size: 20px;
+    }
+
+    .footer-style {
+        position: fixed;
+        position : relative;
+        bottom: -20px;
+        width: 100%;
+        white-space: nowrap;
+    }
+   
+
+}
+
+@media only screen and (max-device-width: 540px) and (max-device-width: 540px) {
+   body{
+       margin-bottom : 650px;
+   }
+}
+
+/*----ipadpro-----*/
+
+@media only screen and (min-device-width: 834px) and (max-device-width: 1112px) and (-webkit-min-device-pixel-ratio: 2) {
+
+    .T-block p {
+        
+        font-size: 35px;
+    }
+    .B-block p {
+        font-size: 35px;
+    }
+}
+
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {
+    .T-block  {
+        font-size: 22px;
+    }
+
+    .B-block  {
+        font-size: 22px;
+    }
+    .T-block p {
+        font-size: 40px;
+    }
+
+    .B-block p {
+        font-size: 25px;
+    }
+}
+
+@media only screen and (min-device-width: 576px) and (max-device-width: 767px) and (-webkit-min-device-pixel-ratio: 2) {
+    body{
+        margin-bottom : 450px;
+    }
+    .T-block {
+        font-size: 16px;
+    }
+
+    .B-block {
+        font-size: 16px;
+    }
+
+    .T-block p {
+        font-size: 35px;
+    }
+
+    .T-block h6 {
+        font-size: 30px;
+    }
+
+    .B-block p {
+        font-size: 16px;
+    }
+
+    .B-block .icon {
+        width: 30px;
+    }
+}

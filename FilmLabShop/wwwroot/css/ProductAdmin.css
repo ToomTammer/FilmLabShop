@@ -1,0 +1,161 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Anton&family=Chonburi&family=Prompt:wght@300;400&family=Roboto:wght@500&display=swap');
+
+.menu-stck li{
+    margin:10px 0;
+}
+
+.navAdmin {
+    font-family: 'Anton', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    
+}
+
+.navAdmin a {
+        color: #C0B5A7;
+}
+    .navAdmin a:hover {
+        color: #E8D1B5;
+    }
+.navAdnAct a {
+    color: #E8D1B5;
+    
+}
+.navAdLog a {
+    color: #FFD525;
+}
+.navAdLog a:hover {
+    color: #D1AF1D;
+}
+.bgTb {
+    background-color: #F2E5D5;
+}
+
+.btnedit {
+    margin: 5px;
+    background-color: #FFD525;
+    color: #245788;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+.btn-del {
+    margin:5px;
+    background-color: #D35244;
+    color: #F2E5D5;
+    padding: 10px;
+    border-radius: 15px;
+}
+.GbtnED {
+    line-height: 3;
+}
+
+.promt-font {
+    font-family: 'Prompt', sans-serif;
+}
+
+.tbhd {
+    background-color: #BAD9C2;
+}
+
+.text-dropdown {
+    margin-bottom: 30px;
+}
+
+    .text-dropdown h1 {
+        font-family: 'Anton', sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 48px;
+        line-height: 88px;
+        display: flex;
+        align-items: center;
+        text-transform: uppercase;
+        color: #734C36;
+        margin-right: 10px;
+        margin-bottom: 0;
+    }
+
+.dropdown-container {
+    font-family: 'Anton', sans-serif;
+    background: #E8D1B5;
+    border-radius: 15px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 0px;
+    /* or 0% */
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    color: #A64F3C;
+    border: none;
+    height: 50px;
+    width: 15rem;
+    justify-content: space-between;
+}
+
+#dropdownMenuButton {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+    #dropdownMenuButton:focus {
+        box-shadow: none;
+    }
+
+.test-title {
+    font-family: 'Anton', sans-serif;
+    color: #734C36;
+    font-size: 2rem;
+}
+
+.boxfield {
+    font-family: 'Anton', sans-serif;
+    background: #E8D1B5;
+    border-radius: 15px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 0px;
+    /* or 0% */
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    color: #A64F3C;
+    border: none;
+    height: 50px;
+    width: 20rem;
+    justify-content: space-between;
+}
+
+.btn-sh {
+    font-family: 'Anton', sans-serif;
+    margin-left: 20px;
+    background-color: #D35244;
+    border-radius: 15px;
+    color: #F2E5D5;
+}
+
+    .btn-sh:hover {
+        background-color: #A73C30;
+    }
+
+.btn-ct {
+    font-family: 'Anton', sans-serif;
+    background-color: #8BB8BE;
+    border-radius: 15px;
+    color: #F2E5D5;
+    height:50px;
+    width:100px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+    .btn-ct:hover {
+        background-color: #5D878C;
+    }
+
+

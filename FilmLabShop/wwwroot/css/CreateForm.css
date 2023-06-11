@@ -1,0 +1,58 @@
+﻿
+.bg-createform {
+    font-family: 'Prompt',sans-serif;
+    background: #E8D1B5;
+}
+
+.btn-ct input {
+    font-family: 'Prompt',sans-serif;
+    background-color: blue;
+    border-radius: 15px;
+    color: #F2E5D5;
+    height: 50px;
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bginput {
+    background-color: #E8E7E6;
+}
+
+
+.ip-img {
+    font-family: 'Prompt',sans-serif;
+    border: none;
+    border-radius: 50px;
+    outline: 0;
+    background-color: #F2E5D5;
+    cursor: pointer;
+}
+.btn-tt {
+    margin-top: 20px;
+    text-align: center;
+    padding: 4px 50px 4px 50px;
+    width: auto;
+    text-decoration: none;
+    font-size: 20px;
+    background-color: #A64F3C;
+    border-radius: 50px;
+    color: #F2E5D5;
+    border: none;
+}
+
+.txtarea {
+    height: 100%;
+    resize: none;
+}
+
+.btn-tt:hover {
+    background-color: #F2E5D5;
+    color: #734C36;
+}
+
+.title-form {
+    font-family: 'Anton', sans-serif;
+
+}

@@ -1,0 +1,1203 @@
+﻿html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    background-image: url(../img/bgall.PNG);
+    background-repeat: repeat-y repeat-x;
+    overflow-x: hidden;
+    
+    margin-top: 60px;
+    width: 100%;
+    margin-bottom: 400px;
+}
+
+.head-label {
+    padding-top: 50px;
+    height: 150px;
+    background-color: #A64F3C;
+    color: #BAD9C2;
+    font-family: 'Anton',sans-serif;
+    font-size: 40px;
+    text-indent: 30px;
+}
+
+.head-table {
+    margin-top: 40px;
+    background-color: rgba(191, 123, 84,0.4);
+    color: #734C36;
+    font-family: 'Prompt',sans-serif;
+    line-height: 45px;
+    font-size: 16px;
+}
+
+/*-------------------product table-----------------------*/
+.product {
+    margin-right: 0px;
+    margin-left: 0px;
+    margin-top: 25px;
+    margin-bottom: 20px;
+}
+
+.pd-img {
+    text-align: center;
+    width: 30%;
+    display: block;
+    float: left;
+    text-align: center;
+}
+
+    .pd-img img {
+        height: 100px;
+        margin: auto;
+        display: block;
+    }
+
+.pd-name {
+    /*width: 60%;*/
+    margin-left: 10%;
+    display: block;
+    float: right;
+    text-align: left;
+    color: #734C36;
+    font-family: 'Prompt',sans-serif;
+    font-size: 16px;
+    line-height: 1;
+}
+
+    .pd-name p {
+        padding-top: 25px;
+        margin-bottom: 0;
+        font-size: 25px;
+        line-height: 1;
+    }
+
+.pd-cost {
+    text-align: center;
+    padding-top: 20px;
+    color: #734C36;
+    font-weight: 500;
+    font-size: 20px;
+    font-family: 'Prompt',sans-serif;
+}
+
+.quantity-container {
+    justify-content: center;
+    text-align: center;
+    color: #734C36;
+    font-size: 12px;
+    font-family: 'Prompt',sans-serif;
+}
+
+.pd-quantity {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 25px;
+    margin-bottom: 10px;
+    display: block;
+    background-color: #734C36;
+    text-align: center;
+    color: #F2E5D5;
+    font-size: 20px;
+    font-family: 'Prompt',sans-serif;
+    width: 100%;
+    border-radius: 20px;
+}
+
+    .pd-quantity svg {
+        position :absolute;
+        position :relative;
+        /*margin-bottom: 10px;*/
+        right :1px;
+        height: 13px;
+        width: 30px;
+        filter: invert(75%) sepia(1%) saturate(6511%) hue-rotate(324deg) brightness(128%) contrast(92%);
+    }
+
+    .pd-quantity button {
+        width: 30px;
+        height: 30px;
+        background-color: #734C36;
+        border-radius: 20px;
+        transition: 0.3s;
+        border: none;
+        background: none;
+    }
+
+    .pd-quantity input {
+        width: 40px;
+        text-align: center;
+        height: 28px;
+        font-size: 20px;
+        background-color: #734C36;
+        color: #F2E5D5;
+        border: none;
+        background: none;
+    }
+
+
+    .pd-quantity button:hover {
+        background-color: #A64F3C;
+    }
+
+
+    .pd-quantity .minus {
+        display: inline-block;
+        float: left;
+    }
+
+    .pd-quantity .plus {
+        display: inline-block;
+        float: right;
+    }
+
+.totalcost {
+    text-align: center;
+    padding-top: 25px;
+    color: #245788;
+    font-weight: 500;
+    font-size: 20px;
+    font-family: 'Prompt',sans-serif;
+}
+
+
+
+
+.pd-cancel {
+    text-align: center;
+}
+
+    .pd-cancel img {
+        display: block;
+        margin: auto;
+        width: 14px;
+        margin-top: 32px;
+        filter: invert(44%) sepia(39%) saturate(1296%) hue-rotate(323deg) brightness(87%) contrast(89%);
+        cursor: pointer;
+        transition: 0.3s
+    }
+
+        .pd-cancel img:hover {
+            width: 18px;
+        }
+
+.line img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    width: 100%;
+}
+
+/*-----------------moredetail-----------------------*/
+
+.detail-total {
+    margin-top: 40px;
+}
+
+
+
+.detail {
+    color: #734C36;
+    font-family: 'Prompt',sans-serif;
+    font-size: 16px;
+}
+
+    .detail p {
+        color: #734C36;
+        font-family: 'Chonburi',sans-serif;
+        font-size: 25px;
+        line-height: 60px;
+    }
+
+
+    .detail img {
+        height: 45px;
+        width: auto;
+        margin: 15px 30px 15px 10px;
+    }
+
+/*-----------------total-----------------------*/
+
+
+.total {
+    background-color: #BAD9C2;
+    box-shadow: 7px 7px #734C36;
+    text-align: center;
+    font-family: 'Prompt',sans-serif;
+    color: #245788;
+}
+
+.head-total {
+    margin: 20px 0px 20px 0px;
+}
+
+    .head-total p {
+        font-family: 'Chonburi',sans-serif;
+        font-size: 25px;
+    }
+
+    .head-total img {
+        width: 30%;
+    }
+
+
+.detail-text {
+    line-height: 60px;
+    font-size: 18px;
+}
+
+    .detail-text p {
+        font-size: 24px;
+        font-weight: 600;
+    }
+
+
+.left {
+    width: 46%;
+    margin-left: 4px;
+    display: block;
+    float: left;
+    text-align: left;
+}
+
+
+
+.right {
+    width: 46%;
+    margin-right: 4px;
+    display: block;
+    float: right;
+    text-align: right;
+}
+
+
+
+.total button, .btn-tt {
+    margin-top: 20px;
+    text-align: center;
+    padding: 4px 50px 4px 50px;
+    width: auto;
+    text-decoration: none;
+    font-size: 20px;
+    background-color: #A64F3C;
+    border-radius: 50px;
+    color: #F2E5D5;
+    border: none;
+}
+
+
+    .total button:hover, .btn-tt:hover {
+        background-color: #F2E5D5;
+        color: #734C36;
+    }
+
+/*--------------Footer---------------------*/
+
+
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    white-space: nowrap;
+    left: 0;
+    display: flex;
+    align-content: center;
+    font-family: 'Prompt', sans-serif;
+    font-weight: 400;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    background-color: #E8D1B5;
+    color: #734C36;
+    font-size: 14px;
+    line-height: 35px !important;
+}
+
+    footer p {
+        display: inline-block;
+        font-weight: 500;
+        font-size: 16px;
+        margin-top: 15px;
+        margin-bottom: 0px;
+    }
+
+.payicon {
+    display: inline-block;
+    width: 28px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.deliver {
+    display: inline-block;
+    height: 28px;
+    width: auto;
+    margin-right: 5px;
+}
+
+.mdicon {
+    display: inline-block;
+    width: 28px;
+    height: auto;
+    margin-right: 15px;
+    margin-bottom: 15px;
+}
+
+/*--------------Responsive----------------------*/
+
+/*----mobile-----*/
+@media only screen and (max-device-width: 575px) and (min-device-width: 60px) {
+    .head-label {
+        margin-top: 100px;
+    }
+
+    .head-table {
+        display: none;
+    }
+}
+
+@media only screen and (max-device-width: 320px) and (min-device-width: 60px) {
+    body {
+        height: inherit;
+        margin-bottom: 650px;
+    }
+
+    .head-label {
+        font-size: 35px;
+        margin-bottom: 40px;
+    }
+
+    .name-img {
+    }
+
+    .product {
+        margin-top: 0px;
+        padding-top: 0px;
+    }
+
+    .pd-img {
+        width: 35%;
+    }
+
+        .pd-img img {
+            position: relative;
+            top: 40px;
+            display: block;
+            margin: auto;
+            width: 110%;
+            height: auto;
+            position: absolute;
+            position: relative;
+            left: -20px;
+        }
+
+    .pd-name {
+        margin-right: 0px;
+        width: 65%;
+        text-align: left;
+        padding-top: 10px;
+        margin-left: 0px;
+        text-align: left;
+        font-size: 12px;
+        line-height: 1;
+        word-break: break-word;
+    }
+
+        .pd-name p {
+            font-size: 16px;
+            line-height: 1;
+        }
+
+
+
+    .pd-cost {
+        margin-left: 31%;
+        margin-right: 9%;
+        width: 60%;
+        text-align: left;
+        font-size: 15px;
+        line-height: 18px;
+        margin-top: 0px;
+        top: -10px;
+    }
+
+
+
+    .quantity-container {
+        position: relative;
+        top: -20px;
+    }
+
+
+        .quantity-container p {
+            margin-left: 35%;
+            margin-right: 0%;
+            width: 65%;
+            font-size: 4vw;
+        }
+
+
+    .pd-quantity {
+        margin-left: 35%;
+        margin-right: 0%;
+        width: 65%;
+        font-size: 15px;
+    }
+
+        .pd-quantity svg {
+            margin-top : 5px;
+            margin-bottom: 10px;
+            height: 10px;
+            width: 10px;
+        }
+
+        .pd-quantity button {
+            width: 22px;
+            height: 22px;
+            border-radius: 20px;
+        }
+
+        .pd-quantity input {
+            width: 40px;
+            text-align: center;
+            height: 22px;
+            font-size: 15px;
+            background-color: #734C36;
+            color: #F2E5D5;
+        }
+
+
+    .totalcost {
+        margin-left: 45%;
+        margin-right: 0%;
+        width: 55%;
+        position: absolute;
+        position: relative;
+        top: -50px;
+        font-size: 18px;
+        margin-bottom: 0px;
+    }
+
+        .totalcost:before {
+            /* Now like a table header */
+            position: absolute;
+            /* Top/left values mimic padding */
+            left: -10px;
+            white-space: nowrap;
+            content: "รวม";
+        }
+
+
+
+
+    .pd-cancel {
+        text-align: left;
+    }
+
+        .pd-cancel img {
+            position: absolute;
+            top: -290px;
+            right: 0px;
+        }
+
+    .line {
+        margin: 0px;
+    }
+
+        .line img {
+            margin: 0px;
+        }
+
+
+    .detail {
+        font-size: 12px;
+    }
+
+        .detail p {
+            margin-top: 20px;
+            font-size: 16px;
+            line-height: 18px;
+            margin-bottom: 0;
+        }
+
+
+        .detail img {
+            width: 20px;
+            margin: auto;
+        }
+
+
+
+    .total {
+        margin-top: 40px;
+        height: 400px;
+    }
+
+
+    .head-total p {
+        font-size: 20px;
+    }
+
+    .detail-text {
+        line-height: 40px;
+        font-size: 14px;
+    }
+
+        .detail-text p {
+            font-size: 16px;
+        }
+
+
+    .payicon {
+        width: 10vw;
+    }
+
+    .deliver {
+        width: auto;
+        height: 3vh;
+    }
+
+    .mdicon {
+        width: 10vw;
+    }
+}
+
+
+
+@media only screen and (min-device-width: 321px) and (max-device-width: 480px) {
+    body {
+        height: inherit;
+        margin-bottom: 700px;
+    }
+
+    .head-label {
+        font-size: 40px;
+        margin-bottom: 40px;
+    }
+
+
+    .name-img {
+    }
+
+    .product {
+        margin-top: 0px;
+        padding-top: 0px;
+    }
+
+    .pd-img {
+        width: 40%;
+    }
+
+        .pd-img img {
+            position: relative;
+            top: 40px;
+            display: block;
+            margin: auto;
+            width: 100%;
+            height: auto;
+            position: absolute;
+            position: relative;
+            left: -20px;
+        }
+
+    .pd-name {
+        margin-right: 0px;
+        width: 60%;
+        text-align: left;
+        margin-top: 40px;
+        margin-left: 0px;
+        text-align: left;
+        word-break: break-word;
+        line-height: 1;
+        font-size: 16px;
+    }
+
+        .pd-name p {
+            font-size: 22px;
+            line-height: 1;
+        }
+
+
+
+    .pd-cost {
+        margin-left: 36%;
+        margin-right: 4%;
+        width: 60%;
+        text-align: left;
+        font-size: 20px;
+        line-height: 18px;
+        margin-top: 0px;
+        top: -10px;
+    }
+
+
+
+    .quantity-container {
+        position: relative;
+        top: -20px;
+    }
+
+
+        .quantity-container p {
+            margin-left: 40%;
+            margin-right: 5%;
+            width: 55%;
+            font-size: 12px;
+        }
+
+
+    .pd-quantity {
+        margin-left: 40%;
+        margin-right: 15%;
+        width: 55%;
+        font-size: 15px;
+    }
+
+        .pd-quantity svg {
+            margin-bottom: 5px;
+            height: 8px;
+            width: 8px;
+        }
+
+        .pd-quantity button {
+            width: 22px;
+            height: 22px;
+            border-radius: 20px;
+        }
+
+
+        .pd-quantity input {
+            width: 40px;
+            text-align: center;
+            height: 22px;
+            font-size: 15px;
+            background-color: #734C36;
+            color: #F2E5D5;
+        }
+
+    .totalcost {
+        margin-left: 45%;
+        margin-right: 0%;
+        width: 55%;
+        position: absolute;
+        position: relative;
+        top: -50px;
+        margin-bottom: 0px;
+        font-size: 20px;
+        line-height: 16vw;
+    }
+
+
+        .totalcost:before {
+            /* Now like a table header */
+            position: absolute;
+            /* Top/left values mimic padding */
+            left: -10px;
+            white-space: nowrap;
+            content: "รวม";
+        }
+
+
+    .pd-cancel {
+        text-align: left;
+    }
+
+        .pd-cancel img {
+            position: absolute;
+            top: -245px;
+            right: 0px;
+        }
+
+    .line {
+        margin: 0px;
+    }
+
+        .line img {
+            position: absolute;
+            position: relative;
+            top: -20px;
+            margin: 0px;
+        }
+
+
+    .detail {
+        font-size: 14px;
+    }
+
+        .detail p {
+            margin-top: 20px;
+            font-size: 16px;
+            line-height: 18px;
+            margin-bottom: 0;
+        }
+
+
+        .detail img {
+            width: 20px;
+            margin: auto;
+        }
+
+
+
+    .total {
+        margin-top: 40px;
+        height: 400px;
+    }
+
+
+    .head-total p {
+        font-size: 24px;
+    }
+
+    .detail-text {
+        line-height: 40px;
+        font-size: 16px;
+    }
+
+        .detail-text p {
+            font-size: 20px;
+        }
+
+
+
+    .payicon {
+        width: 10vw;
+    }
+
+    .deliver {
+        width: auto;
+        height: 3.5vh;
+    }
+
+    .mdicon {
+        width: 10vw;
+    }
+}
+
+@media only screen and (min-device-width: 360px) and (max-device-width: 414px) {
+
+    .head-label {
+        margin-bottom: 60px;
+    }
+
+    .pd-img img {
+        margin-top: 10px;
+    }
+
+    .pd-cancel {
+        text-align: left;
+    }
+
+        .pd-cancel img {
+            position: absolute;
+            top: -370px;
+            right: 0px;
+        }
+
+        .pd-quantity svg{
+            margin-top : 0px;
+            width : 10px;
+            height : 10px;
+        }
+
+    .detail {
+        font-size: 16px;
+    }
+
+        .detail p {
+            margin-top: 20px;
+            font-size: 20px;
+            line-height: 18px;
+            margin-bottom: 0;
+        }
+
+
+        .detail img {
+            width: 25px;
+            margin: auto;
+        }
+
+    .detail-text {
+        font-size: 16px;
+        line-height: 40px;
+    }
+}
+
+
+@media only screen and (max-device-width: 540px) and (min-device-width: 481px) {
+    body {
+        height: inherit;
+        margin-bottom: 700px;
+    }
+
+
+    .head-label {
+        font-size: 40px;
+        margin-bottom: 50px;
+    }
+
+
+    .name-img {
+    }
+
+    .product {
+        margin-top: 0px;
+        padding-top: 0px;
+    }
+
+    .pd-img {
+        width: 40%;
+    }
+
+        .pd-img img {
+            position: relative;
+            top: 40px;
+            display: block;
+            margin: auto;
+            width: 100%;
+            height: auto;
+            position: absolute;
+            position: relative;
+            left: -20px;
+        }
+
+    .pd-name {
+        margin-right: 0px;
+        width: 60%;
+        text-align: left;
+        margin-top: 40px;
+        margin-left: 0px;
+        text-align: left;
+        word-break: break-word;
+        line-height: 1;
+        font-size: 18px;
+    }
+
+        .pd-name p {
+            font-size: 25px;
+            line-height: 1;
+        }
+
+
+
+    .pd-cost {
+        margin-left: 38%;
+        margin-right: 2%;
+        width: 60%;
+        text-align: left;
+        font-size: 20px;
+        line-height: 18px;
+        margin-top: 0px;
+        top: -15px;
+    }
+
+
+
+    .quantity-container {
+        position: relative;
+        top: -20px;
+    }
+
+
+        .quantity-container p {
+            margin-left: 40%;
+            margin-right: 10%;
+            width: 50%;
+            font-size: 16px;
+        }
+
+
+    .pd-quantity {
+        margin-left: 40%;
+        margin-right: 10%;
+        width: 50%;
+        font-size: 20px;
+    }
+
+        .pd-quantity svg {
+            margin-bottom: 5px;
+            height: 12px;
+            width: 12px;
+        }
+
+        .pd-quantity button {
+            width: 30px;
+            height: 30px;
+            border-radius: 20px;
+            border: none;
+            background: none;
+        }
+
+        .pd-quantity input {
+            width: 40px;
+            text-align: center;
+            height: 30px;
+            font-size: 20px;
+            background-color: #734C36;
+            color: #F2E5D5;
+            border: none;
+            background: none;
+        }
+
+    .input-number {
+        margin: 0 -10px;
+        border: 0;
+        z-index: -1;
+    }
+
+        .input-number:focus {
+          
+            border: none;
+           
+            box-shadow: none;
+        }
+
+    .totalcost {
+        margin-left: 45%;
+        margin-right: 0%;
+        width: 55%;
+        position: absolute;
+        position: relative;
+        top: -50px;
+        margin-bottom: 0px;
+        font-size: 24px;
+    }
+
+
+
+        .totalcost:before {
+            /* Now like a table header */
+            position: absolute;
+            /* Top/left values mimic padding */
+            left: -10px;
+            white-space: nowrap;
+            content: "รวม";
+        }
+
+    .pd-cancel {
+        text-align: left;
+    }
+
+        .pd-cancel img {
+            position: absolute;
+            top: -360px;
+            right: 0px;
+        }
+
+    .line {
+        margin: 0px;
+    }
+
+        .line img {
+            margin: 0px;
+        }
+
+
+    .detail {
+        font-size: 18px;
+    }
+
+        .detail p {
+            margin-top: 20px;
+            font-size: 25px;
+            line-height: 30px;
+            margin-bottom: 0;
+        }
+
+
+        .detail img {
+            width: 40px;
+            margin-top: 20px;
+        }
+
+
+
+    .total {
+        margin-top: 40px;
+        height: 400px;
+    }
+
+
+    .head-total p {
+        font-size: 28px;
+        margin-bottom: 5px;
+    }
+
+    .total-dec {
+        margin-top: 0px;
+    }
+
+    .detail-text {
+        line-height: 44px;
+        font-size: 18px;
+    }
+
+        .detail-text p {
+            font-size: 24px;
+        }
+}
+
+@media only screen and (max-device-width: 575px) and (min-device-width: 541px) {
+    body {
+        height: inherit;
+        margin-bottom: 750px;
+    }
+
+
+    .pd-img img {
+        display: block;
+        margin: auto;
+        width: 65vw;
+        height: auto;
+    }
+
+    .pd-name p {
+        margin-top: 3vw;
+        font-size: 9.5vw;
+        line-height: 1;
+    }
+
+    .pd-name {
+        font-size: 6vw;
+        line-height: 1;
+    }
+
+    .pd-cost {
+        font-size: 9vw;
+        line-height: 20vw;
+    }
+
+    .quantity-container {
+        font-size: 4vw;
+    }
+
+
+    .totalcost {
+        font-size: 9vw;
+        line-height: 20vw;
+    }
+
+    .total {
+        margin-top: 60px;
+        height: 480px;
+    }
+}
+
+/*----ipadpro-----*/
+@media only screen and (min-device-width: 768px) and (max-device-width: 834px) and (-webkit-min-device-pixel-ratio: 2) {
+    body {
+        height: inherit;
+        margin-bottom: 380px;
+    }
+
+
+    .pd-img img {
+        display: block;
+        margin: auto;
+        margin-top: 20px;
+        width: 100%;
+        height: auto;
+    }
+
+    .pd-name p {
+        font-size: 22px;
+        line-height: 1;
+    }
+
+    .pd-name {
+        font-size: 14px;
+        line-height: 1;
+    }
+
+    .pd-cost {
+        font-size: 18px;
+    }
+
+    .quantity-container {
+        font-size: 10px;
+    }
+
+    .pd-quantity {
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 15px;
+        width: 100%;
+    }
+
+        .pd-quantity svg {
+            margin-bottom: 4px;
+            height: 10px;
+            width: 10px;
+        }
+
+        .pd-quantity button {
+            width: 22px;
+            height: 22px;
+            border-radius: 20px;
+        }
+
+        .pd-quantity input {
+           
+            text-align: center;
+            height: 22px;
+            font-size: 15px;
+            background-color: #734C36;
+            color: #F2E5D5;
+        }
+
+
+    .totalcost {
+        font-size: 18px;
+    }
+
+
+
+    .head-total p {
+        line-height: 40px;
+        margin-bottom: 0px;
+    }
+
+    .detail-text p {
+        font-size: 18px;
+    }
+
+    .detail-text {
+        font-size: 14px;
+        line-height: 40px;
+    }
+
+    .detail {
+        font-size: 13px;
+    }
+
+    .detail p {
+            margin-top: 10px;
+            line-height: 20px;
+            font-size: 18px;
+    }
+
+
+    .detail img {
+            width: 30px;
+            margin: 8px;
+    }
+
+    .total button {
+        margin-top: 10px;
+    }
+}
+
+
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {
+    .pd-img img {
+        margin-top: 10px;
+        width: 100%;
+        height: auto;
+    }
+}
+
+
+@media only screen and (min-device-width: 834px) and (max-device-width: 1112px) and (-webkit-min-device-pixel-ratio: 2) {
+}

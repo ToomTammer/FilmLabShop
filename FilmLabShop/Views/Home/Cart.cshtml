@@ -1,0 +1,175 @@
+﻿@model IEnumerable<FilmLabShop.Models.CartItem>
+
+@{
+    ViewData["Title"] = "Cart";
+}
+
+<link rel="stylesheet" href="~/css/Cart.css">
+<script src="~/js/CartButton.js"></script>
+<link rel="stylesheet" href="~/css/nav-bar.css">
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+<link href="https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500;1,600&family=Roboto:wght@100;400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+@*<link rel="stylesheet" href="~/js/InputCart.js" />*@
+
+
+<body>
+    <!-----------------body------------------------->
+    <main>
+        <div class="jumbotron-fluid head-label ">
+            <p class="container" style="font-size:30px;">Your Cart</p>
+        </div>
+
+        <div class="container ">
+            <div class="row head-table">
+                <div class="col-sm-4  ">
+                    &nbsp; &nbsp; &nbsp; สินค้า
+                </div>
+
+                <div class="col-sm-2 text-center  ">
+                    ราคา(บาท)
+                </div>
+                <div class="col-sm-2 text-center  ">
+                    จำนวน
+                </div>
+                <div class="col-sm-2 text-center ">
+                    รวม(บาท)
+                </div>
+                <div class="col-sm-1 "> </div>
+            </div>
+
+
+            @foreach (var item in ViewData["cart"] as List<FilmLabShop.Models.CartItem>)
+            {
+                <!--------------------Product1------------------------>
+                <form>
+                    <div class="row product">
+                        <div class="col-sm-5 ">
+                            <div class="jumbotron-fluid">
+                                <div class="row">
+                                    <div class="col-sm-12 name-img">
+                                        <div class="pd-img d-none">
+                                            @if (item.CartImg != null)
+                                            {
+
+                                                <img src="data:image/*;base64,@(Convert.ToBase64String(item.CartImg))">
+                                            }
+                                            else
+                                            {
+                                                <img src="~/img/empty.jpg" />
+                                            }
+
+                                        </div>
+                                        <div class="pd-name">
+                                            <p>@item.CartName</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-2 pd-cost ">
+                            @String.Format("{0:c}", item.CartPrice)
+                        </div>
+                        <div class="col-sm-2  quantity-container">
+
+                            <div class="pd-quantity product-options qty">
+
+                                <a asp-controller="Home" asp-action="Minus" asp-route-id="@item.CartId" class="minus " type="button" name="button">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M0 10h24v4h-24z" /></svg>
+                                </a>
+
+                                <input id="Text1" class="item-quantity" type="text" name="txt1 qty" value="@item.CartQty" readonly>
+                                <a asp-controller="Home" asp-action="Plus" asp-route-id="@item.CartId" action="add" class="plus" type="button" name="button">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M24 10h-10v-10h-4v10h-10v4h10v10h4v-10h10z" /></svg>
+                                </a><br />
+
+
+                            </div>
+                            <p>มีสินค้าในคลังทั้งหมด @item.CartStock ชิ้น</p>
+
+                        </div>
+                        <div class="col-sm-2 totalcost ">
+                            @String.Format("{0:c}", item.CartTotal)
+                        </div>
+                        <div class="col-sm-1 pd-cancel ">
+                            <a class="btn-edit" href="@Url.Action("Remove","Home",new{id= item.CartId})"> <img src="~/icon/cancel.svg" /></a>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12 line">
+                                <img src="~/icon/CartLine.png" />
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            }
+
+        </div>
+        <!--------------------detail------------------------>
+        <div class="container">
+            <div class="row detail-total">
+                <div class="col-sm-6 detail">
+                    <p>บริการการจัดส่ง</p><br />
+
+                    <img class="D-icon" src="~/icon/free-delivery.svg" />
+                    บริการจัดส่งสินค้าฟรี<br />
+
+                    <img class="D-icon" src="~/icon/time-svgrepo.svg" />
+                    จัดส่งภายภายใน 48 ชั่วโมง หลังการสั่งซื้อ<br />
+
+                    <p>การรับประกันสินค้า</p><br />
+
+                    <img class="D-icon" src="~/icon/sell-product.svg" />
+                    รับประกันสินค้า 1 เดือน<br />
+
+                    <img class="D-icon" src="~/icon/refund-svgrepo.svg" />
+                    สินค้ามีปัญหาภายใน 10 วันยินดีคืนเงินให้เต็มจำนวน
+
+                </div>
+
+                <div class="col-sm-1">
+                </div>
+                <!--------------------total------------------------>
+                <div class="col-sm-5 total">
+                    <div class="row">
+                        <div class="col-sm-12 head-total">
+                            <p>ยอดชำระเงิน</p><br />
+                            <img class="total-dec" src="~/icon/LineDec.png" />
+                        </div>
+
+                    </div>
+
+                    <div class="jumbotron-fluid ">
+
+                        <div class="row ">
+                            <div class="col-sm-12 detail-text">
+                                <div class="left">
+                                    รวมการสั่งซื้อ<br />
+                                    ค่าส่ง<br />
+                                    <p>รวมทั้งหมด </p>
+                                </div>
+
+                                <div class="right">
+                                    @ViewBag.Total บาท<br />
+                                    0.00 บาท<br />
+                                    <p>@ViewBag.Total บาท</p>
+                                </div>
+
+                            </div>
+                        </div>
+
+
+                        <br />
+
+                        <a href="~/home/BillForm" class="btn-tt"> ชำระเงิน</a>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+    </main>
+
+
+</body>
+<!--------------------footer------------------------->

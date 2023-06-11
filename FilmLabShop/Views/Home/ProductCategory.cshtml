@@ -1,0 +1,100 @@
+﻿@model IEnumerable<FilmLabShop.Models.db.TbProduct>
+@{
+    ViewData["Title"] = "ProductCategory";
+}
+
+
+<link rel="stylesheet" href="~/css/nav-bar.css">
+<link rel="stylesheet" href="~/css/ProductCategory.css">
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+<link rel="stylesheet" href="~/js/CheckSearchbox.js" />
+
+<body>
+    <main class="container container-main-full">
+        <div class="filter">
+            <button class="btn btn-default" type="button" data-toggle="collapse" data-target=".mobile-filter" aria-expanded="false" aria-controls=".mobile-filter">Filters<span class="fa fa-filter pl-1"></span></button>
+        </div><h6 class="col-md-5 p-1 border-bottom">
+            <a asp-area="" asp-controller="Home" asp-action="ProductCategory">
+                หมวดหมู่สินค้า
+            </a>
+        </h6>
+        <h5 class="col-md-5 p-1 h5">
+            <a asp-area="" asp-controller="Home" asp-action="ProductCategory">
+                หมวดหมู่สินค้า&nbsp;
+            </a>
+        </h5>
+        <div class="mobile-filter collapse">
+
+            <ul>
+                กล้องฟิล์ม
+                <li><a asp-area="" asp-controller="Home" asp-action="ProductOlympus" name="querry">OLYMPUS</a></li>
+                <li><a asp-area="" asp-controller="Home" asp-action="ProductPentaxLens" name="querry">PENTAX</a></li>
+            </ul>
+            <ul>
+                เลนส์ถ่ายภาพ
+                <li><a asp-area="" asp-controller="Home" asp-action="ProductOlympusLens" name="querry">OLYMPUS</a></li>
+                <li><a asp-area="" asp-controller="Home" asp-action="ProductPentaxLens" name="querry">PENTAX</a></li>
+            </ul>
+        </div>
+
+        <div class="sidebar-category col-lg-3">
+
+            <ul>
+                กล้องฟิล์ม
+                <li><a asp-area="" asp-controller="Home" asp-action="ProductOlympus">OLYMPUS</a></li>
+                <li><a asp-area="" asp-controller="Home" asp-action="ProductPentax">PENTAX</a></li>
+            </ul>
+            <ul>
+                เลนส์ถ่ายภาพ
+                <li><a asp-area="" asp-controller="Home" asp-action="ProductOlympusLens">OLYMPUS</a></li>
+                <li><a asp-area="" asp-controller="Home" asp-action="ProductPentaxLens">PENTAX</a></li>
+            </ul>
+
+        </div>
+
+
+        <section class="products-category col-lg-9">
+
+            <div class="row container d-flex justify-content-between align-items-start card-margin">
+                @foreach (var item in Model)
+                {
+
+                    <div class="card col-lg-4 p-0 card-margin-contain">
+                        <a asp-area="" asp-controller="Home" asp-action="ProductDetail" asp-route-id="@item.PdId" class="card-img-top card-img-bg">
+                            @if (item.PdImg != null)
+                            {
+                                <img src="data:image/*;base64,@(Convert.ToBase64String(item.PdImg))">
+                            }
+                            else
+                            {
+                                <img src="~/img/empty.jpg" />
+                            }
+                        </a>
+                        <div class="card-body text-card-camera">
+                            <a asp-area="" asp-controller="Home" asp-action="ProductDetail" asp-route-id="@item.PdId">
+                                <div class="row d-flex text-status-color">
+                                    <h6 class="card-text col text-status-camera">สถานะสินค้า : <span class="card-text text-color">@Html.DisplayFor(modelItem => item.PdStatus)</span></h6>
+                                </div>
+                                <h2 class="card-title text-title-camera">@Html.DisplayFor(modelItem => item.PdName)</h2>
+                                <div class="row price-sale-text">
+                                    <h3 class="text-price-camera card-text col">@String.Format("{0:c}", item.PdPrice)</h3>
+                                    <p class="card-text text-sale-camera col">@Html.DisplayFor(modelItem => item.PdDelete) ขายแล้ว</p>
+                                </div>
+                            </a>
+                            <a asp-area="" asp-controller="Home" asp-action="Addtocart3" asp-route-id="@item.PdId" class="btn btn-primary btn-card-camera">เพิ่มไปยังรถเข็น</a>
+                        </div>
+                    </div>
+
+
+
+
+                }
+
+            </div>
+        </section>
+
+    </main>
+
+
+
+</body>

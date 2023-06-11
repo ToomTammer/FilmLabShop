@@ -1,0 +1,99 @@
+﻿@model FilmLabShop.Models.db.TbCustomer
+@{
+    ViewData["Title"] = "Bill Form";
+}
+
+<link rel="stylesheet" href="~/css/billform2.css">
+<link rel="stylesheet" href="~/css/nav-bar.css">
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+<link href="https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500;1,600&family=Roboto:wght@100;400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="~/js/CheckSearchbox.js" />
+
+<body>
+
+    <main>
+        <div class="jumbotron-fluid ">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12 head-text">
+                        Shipping Address<br />
+                        <img class="line-head" src="~/icon/LineDec.png" />
+                    </div>
+
+
+
+                    <div class="col-sm-5 text-center L-block  ">
+
+                        <div class="jumbotron-fluid ">
+                            <div class="row">
+                                <div class="col-sm-12 ">
+                                    <div class="T-block ">
+                                        ยอดชำระเงินทั้งหมด<br />
+                                        <img class="line" src="~/icon/LineDec.png" /><br />
+                                        <p> @ViewBag.Total</p><br />
+                                        <h6> บาท</h6>
+                                        <img class="line" src="~/icon/LineDec.png" />
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-sm-12 ">
+                                    <div class="B-block">
+                                        ช่องทางการชำระเงิน<br />
+                                        <img class="line" src="~/icon/LineDec.png" /><br />
+                                        <img class="icon" src="~/icon/BKK.png" /> <p>001- 2- 33344 - 8</p><br />
+                                        <img class="icon" src="~/icon/SCB.png" /><p>001- 2- 33344 - 8</p><br />
+                                        <img class="line" src="~/icon/LineDec.png" />
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="col-sm-7 form-bill">
+                        <div class="jumbotron-fluid ">
+                            <div class="row">
+                                <div class="col-sm-12 R-block">
+                                    <form asp-action="BillForm" method="post" enctype="multipart/form-data">
+                                        <p>ชื่อ</p><br />
+                                        <input asp-for="CusName" name="Name" class=" field" /><br />
+                                        <span asp-validation-for="CusName" class="text-danger"></span>
+                                        <p>อีเมล์</p><br />
+                                        <input asp-for="CusEmail" name="Email" class=" field" /><br />
+                                        <span asp-validation-for="CusEmail" class="text-danger"></span>
+                                        <p>เบอร์โทร</p><br />
+                                        <input asp-for="CusPhone" name="Phone" class="  field" /><br />
+                                        <span asp-validation-for="CusPhone" class="text-danger"></span>
+                                        <p>ที่อยู่</p><br />
+                                        <input asp-for="CusAddress" name="Address" class="field" /><br />
+                                        <input type="file" asp-for="CusReceipt" name="Receipt" class="attach" placeholder="แนบใบเสร็จ" /><br />
+                                        <span asp-validation-for="CusAddress" class="text-danger"></span>
+                                        <input class="submit-btn" type="submit" value="สั่งสินค้า" />
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+</body>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

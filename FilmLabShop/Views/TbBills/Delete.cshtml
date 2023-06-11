@@ -1,0 +1,75 @@
+﻿@model FilmLabShop.Models.db.TbBill
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+
+<section class="container">
+    <div style="height:100px;">
+    </div>
+    <h1>Delete</h1>
+
+    <h3>Are you sure you want to delete this?</h3>
+    <div>
+        <h4>TbBill</h4>
+        <hr />
+        <dl class="row">
+            <dt class="col-sm-2">
+                Date
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.BillDate)
+            </dd>
+            <dt class="col-sm-2">
+                Customer ID
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Cus.CusId)
+            </dd>
+            <dt class="col-sm-2">
+                Customer Name
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Cus.CusName)
+            </dd>
+
+            <dt class="col-sm-2">
+                Product ID
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Pd.PdId)
+            </dd>
+
+            <dt class="col-sm-2">
+                Product Name
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.PdName)
+            </dd>
+
+            <dt class="col-sm-2">
+                Quantity
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.BillQty)
+            </dd>
+            <dt class="col-sm-2">
+                Total
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.BillTotal)
+            </dd>
+
+
+        </dl>
+
+        <form asp-action="Delete">
+            <input type="hidden" asp-for="BillId" />
+            <input type="submit" value="Delete" class="btn btn-danger mt-3" />
+            <a class="btn btn-secondary mt-3" asp-action="Index">Back to List</a>
+        </form>
+    </div>
+    <div style="height:40px;">
+    </div>
+</section>
